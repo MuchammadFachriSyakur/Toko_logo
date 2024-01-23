@@ -1,0 +1,252 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+.fullcontainer{
+  box-sizing: border-box;
+  width: 1300px;
+  margin: 0 auto;
+  background-color: #eaeaea;
+  color: black;
+}
+.fullcontainer .container{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  background-color: white;
+}
+.fullcontainer .container .navbar{
+  box-sizing: border-box;
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  gap: 5px;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+.fullcontainer .container .navbar .grid1{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+.fullcontainer .container .navbar .grid1 .toggle{
+  box-sizing: border-box;
+  height: 25px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.fullcontainer .container .navbar .grid1 .toggle span{
+  display: block;
+  width: 30px; 
+  height: 3px;
+  background-color: black;
+ }
+.fullcontainer .container .navbar .grid1 .logo{
+  box-sizing: border-box;
+  width: 60%;
+  padding: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.fullcontainer .container .navbar .grid1 .logo .logo_picture{
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  background-color: black;
+}
+.fullcontainer .container .navbar .grid1 .logo .brand_name{
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+.fullcontainer .container .navbar .grid2{
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 10px;
+  gap: 40px;
+  background-color: white;
+  list-style-type: none;
+  transition: all .8s ease-in-out;
+}
+.fullcontainer .container .navbar .grid2.aktif{
+  display: flex;
+}
+.fullcontainer .container .navbar .grid2 li a{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  gap: 10px;
+  text-decoration: none;
+}
+.fullcontainer .container .navbar .grid2 li a i{
+  font-size: 20px;
+  color: black;
+}
+.fullcontainer .container .navbar .grid2 li a p{
+  font-size: 16px;
+  color: black;
+  text-transform: capitalize;
+}
+.fullcontainer .container .page{
+  box-sizing: border-box;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 3px;
+}
+.fullcontainer .footer{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px 5px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fullcontainer .footer p{
+  font-size: 15px;
+  color: white;
+  font-weight: 400;
+}
+.table-info{
+  margin: 0;
+ }
+.table-info thead tr th{
+  padding: 10px;
+  border: .5px solid black;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.table-info tbody tr td{
+  padding: 10px;
+  border: .5px solid black;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+}
+.fullcontainer .container .page .title_page{
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.fullcontainer .container .page #formulir-checkout{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.fullcontainer .container .page #formulir-checkout label{
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.fullcontainer .container .page #formulir-checkout input{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.fullcontainer .container .page #formulir-checkout textarea{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.fullcontainer .container .page #formulir-checkout select{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.fullcontainer .container .page #formulir-checkout button{
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: rgb(255,99,55);
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.fullcontainer .container .page .main-invoice{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #EFEFEF;
+  padding: 5px;
+  gap: 5px;
+}
+.fullcontainer .container .page .main-invoice table{
+  box-sizing: border-box;
+  width: 100%;
+}
+.fullcontainer .container .page .main-invoice button {
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 8px 15px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+}
+.fullcontainer .container .page .main-invoice button:hover{
+  background-color: white;
+  color: black;
+}

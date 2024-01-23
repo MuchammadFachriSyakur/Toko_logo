@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Toko ~ Logo Invoice</title>
+  <link rel="stylesheet" href="invoice.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="responCek.css" type="text/css" media="all" />
+</head>
+<body>
+<div class="fullcontainer">
+<div class="container">
+  
+    <nav class="navbar">
+      <div class="grid1">
+        <button class="toggle" id="toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="logo">
+          <img src="../Source/Logo.jpg" alt="L" class="logo_picture">
+          <p class="brand_name">Logoku</p>
+        </div>
+      </div>
+      <ul class="grid2">
+        <li>
+          <a href="../index.html">
+            <i class="ph ph-house"></i>
+            <p>Home</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-address-card"></i>
+            <p>About</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="ph ph-chart-bar"></i>
+            <p>Mulai Berjualan</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-tag"></i>
+            <p>promosi</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-comment"></i>
+            <p>contact</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="page">
+      <div class="main-invoice" id="cetakke">
+                <h2>Invoice Pembayaran</h2><br>
+
+                <h3>Informasi Pengiriman</h3>
+                <table class="datapem">
+                    <tr>
+                        <td width="150px">Nama Pelanggan</td>
+                        <td>:</td>
+                        <td width="450px"><span id="invoice-nama"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>:</td>
+                        <td><span id="invoice-alamat"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td><span id="invoice-email"></span></td>
+                    </tr>
+                    <tr>
+                        <td>No. Telepon</td>
+                        <td>:</td>
+                        <td><span id="invoice-telepon"></span></td>
+                    </tr>
+                </table>
+                <br>
+
+                <h3>Data Pembayaran</h3>
+                <table class="datapem">
+                    <tr>
+                        <td width="150px">Nama Lengkap</td>
+                        <td>:</td>
+                        <td width="450px"><span id="invoice-pengirim"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Rekening</td>
+                        <td>:</td>
+                        <td><span id="invoice-rek"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Bank</td>
+                        <td>:</td>
+                        <td><span id="invoice-bank">Kantor Cabang: <span id="invoice-cabang"></span></span></td>
+                    </tr>
+                </table>
+                <br>
+
+                <h3>Rincian Pembelian</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="200px" style="text-align: center;">Nama Produk</th>
+                            <th width="20px" style="text-align: center;">Quantity</th>
+                            <th width="20px" style="text-align: center;">Harga</th>
+                            <th width="150px" style="text-align: center;">Jumlah Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daftar-keranjang">
+
+                    </tbody>
+                    <tbody>
+                        <tr>
+                        <td>Total Belanja</td>
+                        <td><span id="total-belanja">Rp 0.00</span></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;" colspan="3">Ongkos Kirim</td>
+                        <td style="text-align: right;"><span id="invoice-ongkir"></span></td>
+                        
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;" colspan="3">Total Pembayaran</td>
+                        <td style="text-align: right;"><span id="invoice-total"></span></td>
+                        
+                    </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h3>Informasi Pembayaran (Rekening Bank)</h3>
+                <p>silakan transfer sejumlah Total Pembayaran (<span id="total-bayar"></span>) ke nomor rekening berikut:</p>
+                <ul>
+                    <li><span id="invoice-rekening"></span></li>
+                </ul>
+                <p>Kantor Cabang : <span id="invoice-cabang"></span></p><br>
+
+                <button onclick="cetakInvoice('cetakke')">Cetak Invoice</button>
+            </div>
+    </div>
+</div>
+<footer class="footer">
+  <p>Copyright 2023 &#169; All right revisited</p>
+</footer>
+</div>
+<script src="invoice.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
