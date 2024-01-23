@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Toko ~ Logo Checkout</title>
+  <link rel="stylesheet" href="checkout.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="responCek.css" type="text/css" media="all" />
+</head>
+<body>
+<div class="fullcontainer">
+<div class="container">
+  
+    <nav class="navbar">
+      <div class="grid1">
+        <button class="toggle" id="toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="logo">
+          <img src="../Source/Logo.jpg" alt="L" class="logo_picture">
+          <p class="brand_name">Logoku</p>
+        </div>
+      </div>
+      <ul class="grid2">
+        <li>
+          <a href="../index.html">
+            <i class="ph ph-house"></i>
+            <p>Home</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-address-card"></i>
+            <p>About</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="ph ph-chart-bar"></i>
+            <p>Mulai Berjualan</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-tag"></i>
+            <p>promosi</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-comment"></i>
+            <p>contact</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="page">
+      <p class="title_page">Keranjang</p>
+      <table class="table-info" cellspacing="0">
+            <thead class="title_list">
+              <tr>
+                <th>Nama Barang</th>
+                <th>Jumlah Barang</th>
+                <th>Harga</th>
+                <th>Total </th>
+              </tr>
+            </thead>
+            <tbody class="cart_list">
+             
+              
+            </tbody>
+            <tbody class="totalBelanja">
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Total Keranjang</td>
+                <td class="total-belanja">Rp 0,000</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="title_page">Formulir</p>
+          
+          <form action="../Invoice/invoice.html" id="formulir-checkout" method="post" autocomplete="of">
+                    <h2>Informasi Pengiriman</h2>
+                    <label for="nama"> Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" required autofocus="">
+
+                    <label for="alamat">Alamat Pengiriman:</label>
+                    <textarea name="alamat" id="alamat" cols="40" rows="3" required></textarea>
+
+                    <label for="rt">RT/RW:</label>
+                    <input type="number" id="rt" name="rt" required>
+                    <input type="number" id="rw" name="rw" required>
+
+                    <label for="desa">Desa:</label>
+                    <input type="text" id="desa" name="desa" required>
+                    <label for="kecamatan">Kecamatan:</label>
+                    <input type="text" id="kecamatan" name="kecamatan" required>
+
+                    <label for="kota">Kota:</label>
+                    <input type="text" id="kota" name="kota" required>
+
+                    <label for="kode-pos">Kode Pos:</label>
+                    <input type="number" id="kode-pos" name="kode-pos" required>
+
+                    <label for="ongkir">Ongkos Kirim:</label>
+                    <input type="number" id="ongkir" name="ongkir" required>
+                    
+                    <h2>Informasi Kontak</h2>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telepon">Nomor Telepon:</label>
+                    <input type="tel" id="telepon" name="telepon" required>
+
+                    <h2>Informasi Pembayaran (Rekening Bank)</h2>
+                    <p>Segera selesaikan proses pembelian, dengan cara melakukan transfer sesuai jumlah yang tertera pada Total Belanja di atas ke nomor rekening Toko Rieda</p>
+
+                    <label for="bank">Bank:</label>
+                    <select name="bank" id="bank" required>
+                        <option value="bca">BCA (Bank Cenral Asia)</option>
+                        <option value="bni">BNI (Bank Nasional Indonesia)</option>
+                        <option value="mandiri">Bank Mandiri</option>
+                        <option value="bri">BRI (Bank Rakyat Indonesia)</option>
+                    </select>
+
+                    <label for="nomor-rekening">Nomor Rekening:</label>
+                    <input type="number" id="nomor-rekening" name="nomor-rekening" required>
+
+                    <label for="nama-rekening">Nama Pemegang Rekening:</label>
+                    <input type="text" id="nama-rekening" name="nama-rekening" required>
+
+                    <label for="cabang">Cabang Bank (opsional):</label>
+                    <input type="text" id="cabang" name="cabang">
+
+                    <button id="selesaikan-pembayaran" onclick="selesaikanPembayaran()">Selesaikan Pembayaran</button>
+                </form>
+          
+    </div>
+</div>
+<footer class="footer">
+  <p>Copyright 2023 &#169; All right revisited</p>
+</footer>
+</div>
+<script src="chekout.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
