@@ -1,0 +1,467 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+.fullcontainer{
+  box-sizing: border-box;
+  width: 1300px;
+  margin: 0 auto;
+  background-color: #eaeaea;
+}
+.fullcontainer .container{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  background-color: white;
+}
+.fullcontainer .container .navbar{
+  box-sizing: border-box;
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  gap: 5px;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+.fullcontainer .container .navbar .grid1{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+.fullcontainer .container .navbar .grid1 .toggle{
+  box-sizing: border-box;
+  height: 25px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.fullcontainer .container .navbar .grid1 .toggle span{
+  display: block;
+  width: 30px; 
+  height: 3px;
+  background-color: black;
+ }
+.fullcontainer .container .navbar .grid1 .logo{
+  box-sizing: border-box;
+  width: 60%;
+  padding: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.fullcontainer .container .navbar .grid1 .logo .logo_picture{
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  background-color: black;
+}
+.fullcontainer .container .navbar .grid1 .logo .brand_name{
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+.fullcontainer .container .navbar .grid2{
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 10px;
+  gap: 40px;
+  background-color: white;
+  list-style-type: none;
+  transition: all .8s ease-in-out;
+}
+.fullcontainer .container .navbar .grid2.aktif{
+  display: flex;
+}
+.fullcontainer .container .navbar .grid2 li a{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  gap: 10px;
+  text-decoration: none;
+}
+.fullcontainer .container .navbar .grid2 li a i{
+  font-size: 20px;
+  color: black;
+}
+.fullcontainer .container .navbar .grid2 li a p{
+  font-size: 16px;
+  color: black;
+  text-transform: capitalize;
+}
+.fullcontainer .container .page{
+  box-sizing: border-box;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 3px;
+}
+.fullcontainer .container .page .hero{
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  background-color: aqua;
+  border-radius: 5px;
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.fullcontainer .container .page .hero.aktif1{
+  transform: translateX(0);
+  opacity: 1;
+}
+.fullcontainer .container .page .hero img{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  background: linear-gradient(to top right,crimson,salmon,yellow);
+  border-radius: 5px;
+}
+.fullcontainer .container .page .daftar_produk{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+  gap: 10px;
+  transform: translateX(-35px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.fullcontainer .container .page .daftar_produk.aktif2{
+  transform: translateX(0);
+  opacity: 1;
+}
+.fullcontainer .container .page .daftar_produk .title_page{
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: black;
+}
+.fullcontainer .container .page .daftar_produk      .search_produk{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+}
+.fullcontainer .container .page .daftar_produk      .search_produk #search_item{
+  box-sizing: border-box;
+  width: 95%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+.fullcontainer .container .page .daftar_produk .kategori_produk{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.fullcontainer .container .page .daftar_produk .kategori_produk button{
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 8px 15px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+}
+.fullcontainer .container .page .daftar_produk .kategori_produk button:hover{
+  background-color: white;
+  color: black;
+}
+.fullcontainer .container .page .daftar_produk .grid1{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.fullcontainer .container .page .daftar_produk .grid1 .item{
+  box-sizing: border-box;
+  width: 150px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.fullcontainer .container .page .daftar_produk .grid1 .item.itemAktif{
+  transform: translateY(0);
+  opacity: 1;
+}
+.fullcontainer .container .page .daftar_produk .grid1 .item img{
+  box-sizing: border-box;
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.fullcontainer .container .page .daftar_produk .grid1 .item .nama_item{
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: bold;
+}
+.fullcontainer .container .page .daftar_produk .grid1 .item .detail{
+  box-sizing: border-box;
+  padding: 10px 30px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.fullcontainer .container .page .daftar_produk .grid1 .item .detail:hover{
+  background-color: white;
+  color: black;
+}
+.fullcontainer .container .page .daftar_produk .grid1 .item .beli_produk{
+  box-sizing: border-box;
+  padding: 10px 30px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.fullcontainer .container .page .daftar_produk .grid1 .item .beli_produk:hover{
+  background-color: white;
+  color: black;
+}
+.fullcontainer .container .page .cart{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+.fullcontainer .container .page .cart .title_page{
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: black;
+}
+.fullcontainer .container .page .cart .cart_item{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+  gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+}
+.table-info{
+  margin: 0;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s ease;
+ }
+.table-info.aktif3{
+  transform: translateY(0);
+  opacity: 1;
+ }
+  
+.table-info thead tr th{
+  padding: 10px;
+  border: .5px solid black;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.table-info tbody tr td{
+  padding: 10px;
+  border: .5px solid black;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+}
+.table-info .cart_list tr td:nth-child(2) button{
+ box-sizing: border-box;
+ width: 25px;
+ height: 25px;
+ background-color: black;
+ color: white;
+ font-size: 17px;
+ font-weight: bold;
+ border-radius: 5px;
+ border: 1px solid rgb(0,0,0,0.5);
+}
+.table-info .cart_list tr td:nth-child(2) button:hover{
+  background-color: white;
+  color: black;
+}
+.fullcontainer .container .page .cart .chekout{
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 8px 15px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.fullcontainer .container .page .cart .chekout:hover{
+  background-color: white;
+  color: black;
+}
+.fullcontainer .footer{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px 5px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fullcontainer .footer p{
+  font-size: 15px;
+  color: white;
+  font-weight: 400;
+}
+.popup{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #eaeaea;
+  animation-name: fade;
+  animation-duration: 1s;
+  transition: all 1s ease-in-out;
+  z-index: 200;
+}
+.popup .close_popup{
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  padding: 3px 5px;
+}
+.popup .close_popup i{
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.popup .picture{
+  box-sizing: border-box;
+  width: 100%;
+  height: 250px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup .picture img{
+  width: 250px;
+  height: 100%;
+}
+.popup .popup_detail{
+  box-sizing: border-box;
+  width: 100%;
+  height: 350px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5px 8px;
+  gap: 5px;
+}
+.popup .popup_detail .title_produk{
+  font-size: 25px;
+  font-weight: bold;
+}
+.popup .popup_detail .deskripsi_produk{
+  flex-basis: 15px;
+  font-weight: 300;
+}
+
+
+@keyframes fade {
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(0);
+  }
+}

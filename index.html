@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Toko ~ logo</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="responsife.css" type="text/css" media="all" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://kit.fontawesome.com/7ea4d1688c.js" crossorigin="anonymous"></script>
+</head>
+
+<div class="fullcontainer">
+<div class="container">
+  
+    <nav class="navbar">
+      <div class="grid1">
+        <button class="toggle" id="toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="logo">
+          <img src="Source/Logo.jpg" alt="L" class="logo_picture">
+          <p class="brand_name">Logoku</p>
+        </div>
+      </div>
+      <ul class="grid2">
+        <li>
+          <a href="#">
+            <i class="ph ph-house"></i>
+            <p>Home</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-address-card"></i>
+            <p>About</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="ph ph-chart-bar"></i>
+            <p>Mulai Berjualan</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-tag"></i>
+            <p>promosi</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-comment"></i>
+            <p>contact</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="page">
+      <section class="hero">
+        <img name="slide" alt="slide">
+      </section>
+      
+      <div class="daftar_produk">
+        <p class="title_page">produk</p>
+        <div class="search_produk">
+          <input type="search" name="search_item" id="search_item" placeholder="Masukan Nama Logo" onkeyup="cariBarang()"/>
+        </div>
+        <div class="kategori_produk">
+          <button onclick="filter_kategori('all')">Semua</button>
+          <button onclick="filter_kategori('mono')">Monogram</button>
+          <button onclick="filter_kategori('3dimensi')">3Dimensi</button>
+          <button onclick="filter_kategori('abstrak')">Abstrak</button>
+        </div>
+        <div class="grid1">
+          
+          <section class="item" data-kategori="mono">
+            <img src="Source/Produk1.jpg" alt="Produk">
+            <p class="nama_item">Logo 3Dimensi</p>
+            <button class="detail" onclick="detail_Produk('Logo Monogram',100000,'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi aperiam hic ipsum commodi sint omnis dolorem sapiente, earum id sequi explicabo ratione atque tenetur nisi. Temporibus nostrum quibusdam sequi laborum laboriosam dolorem in cupiditate ipsam!','Source/Produk1.jpg')">Detail</button>
+            <button class="beli_produk" onclick="tambahKeKeranjang('Logo Monogram',100000)">Beli</button>
+          </section>
+          
+          <section class="item" data-kategori="3dimensi">
+            <img src="Source/Produk2.jpg" alt="Produk">
+            <p class="nama_item">Logo Thehouglas</p>
+            <button class="detail" onclick="detail_Produk('Logo Monogram',20000,'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi aperiam hic ipsum commodi sint omnis dolorem sapiente, earum id sequi explicabo ratione atque tenetur nisi. Temporibus nostrum quibusdam sequi laborum laboriosam dolorem in cupiditate ipsam!','Source/Produk2.jpg')">Detail</button>
+            <button class="beli_produk" onclick="tambahKeKeranjang('Logo 3Dimensi',20000)">Beli</button>
+          </section>
+          
+          <section class="item" data-kategori="abstrak">
+            <img src="Source/Produk3.jpg" alt="Produk">
+            <p class="nama_item">Logo Spiral</p>
+            <button class="detail" onclick="detail_Produk('Logo Spiral',100000,'Logo ini memiliki desain yang sederhana namun elegan. Bentuk spiral yang berwarna biru dan putih menciptakan kesan yang profesional dan modern. Logo ini juga memiliki makna yang positif, yaitu pertumbuhan, evolusi, dan transformasi. Makna ini sesuai dengan bidang teknologi atau sains, yang terus berkembang dan berubah.','Source/Produk3.jpg')">Detail</button>
+            <button class="beli_produk" onclick="tambahKeKeranjang('Logo Spiral',20000)">Beli</button>
+          </section>
+          
+          <section class="item" data-kategori="mono">
+            <img src="Source/Produk4.jpg" alt="Produk">
+            <p class="nama_item">Logo F-Shild</p>
+            <button class="detail" onclick="detail_Produk('Logo F-Shild',100000,'Logo ini menampilkan huruf F dalam bentuk perisai. Huruf F adalah simbol kekuatan dan kekuasaan, dan perisai adalah simbol perlindungan. Logo ini sederhana dan elegan, dan akan cocok untuk perusahaan yang ingin menonjol dari keramaian.','Source/Produk4.jpg')">Detail</button>
+            <button class="beli_produk" onclick="tambahKeKeranjang('Logo F-Shild',100000)">Beli</button>
+          </section>
+          
+          <section class="item" data-kategori="mono">
+            <img src="Source/Produk5.jpg" alt="Produk">
+            <p class="nama_item">Logo Agility</p>
+            <button class="detail" onclick="detail_Produk('Logo Agility',30000,'Logo ini menampilkan huruf AG dalam bentuk petir. Huruf A dan G adalah simbol kekuatan dan ketangkasan, dan petir adalah simbol kekuatan dan energi. Logo ini berwarna merah dan biru, yang merupakan warna-warna yang sering dikaitkan dengan kekuatan dan semangat.','Source/Produk5.jpg')">Detail</button>
+            <button class="beli_produk" onclick="tambahKeKeranjang('Logo Agility',30000)">Beli</button>
+          </section>
+          
+          <section class="item" data-kategori="3dimensi">
+            <img src="Source/Produk6.jpg" alt="Produk">
+            <p class="nama_item">Logo Harmony</p>
+            <button class="detail" onclick="detail_Produk('Logo Agility',45000,'Logo ini menampilkan huruf AG dalam bentuk petir. Huruf A dan G adalah simbol kekuatan dan ketangkasan, dan petir adalah simbol kekuatan dan energi. Logo ini berwarna merah dan biru, yang merupakan warna-warna yang sering dikaitkan dengan kekuatan dan semangat.','Source/Produk6.jpg')">Detail</button>
+            <button class="beli_produk" onclick="tambahKeKeranjang('Logo Harmony',45000)">Beli</button>
+          </section>
+          
+          <section class="item" data-kategori="3dimensi">
+            <img src="Source/Produk7.jpg" alt="Produk">
+            <p class="nama_item">Logo Aegis</p>
+            <button class="detail" onclick="detail_Produk('Logo Aegis',60000,'Logo ini menampilkan huruf AG dalam bentuk petir. Huruf A dan G adalah simbol kekuatan dan ketangkasan, dan petir adalah simbol kekuatan dan energi. Logo ini berwarna merah dan biru, yang merupakan warna-warna yang sering dikaitkan dengan kekuatan dan semangat.','Source/Produk7.jpg')">Detail</button>
+            <button class="beli_produk" onclick="tambahKeKeranjang('Logo Aegis',60000)">Beli</button>
+          </section>
+          
+        </div>
+      </div>
+      
+      <div class="cart">
+        <p class="title_page">Keranjang anda</p>
+        <div class="cart_item">
+          <table class="table-info" cellspacing="0">
+            <thead class="title_list">
+              <tr>
+                <th>Nama Barang</th>
+                <th>Jumlah Barang</th>
+                <th>Harga</th>
+                <th>Total </th>
+              </tr>
+            </thead>
+            <tbody class="cart_list">
+              
+              
+              
+            </tbody>
+            <tbody class="totalBelanja">
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Total Keranjang</td>
+                <td class="total-belanja">Rp 0,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button onclick="chekout()" class="chekout">Checkout</button>
+      </div>
+    </div>
+</div>
+<footer class="footer">
+  <p>Copyright 2023 &#169; All right revisited</p>
+</footer>
+</div>
+<script src="script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+
+
+
